@@ -1,21 +1,4 @@
-(function(name, definition) {
-
-/****************
- *  A tolerant, minimal icalendar parser
- *  (http://tools.ietf.org/html/rfc5545)
- *
- *  <peterbraden@peterbraden.co.uk>
- * **************/
-
-  if (typeof module !== 'undefined') {
-    module.exports = definition();
-  } else if (typeof define === 'function' && typeof define.amd === 'object'){
-    define(definition);
-  } else {
-    this[name] = definition();
-  }
-
-}('ical', function(){
+function ical(){
 
    // Unescape Text re RFC 4.3.11
   var text = function(t){
@@ -470,4 +453,4 @@
     }
 
   }
-}))
+}
